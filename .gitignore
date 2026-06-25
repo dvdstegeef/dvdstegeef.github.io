@@ -1,0 +1,18 @@
+# Privégegevens en lokale imports
+private-data/*
+!private-data/README.md
+*.backup.json
+*.private.json
+.env
+.env.*
+!.env.example
+
+# Buildoutput
+_site/
+node_modules/
+.DS_Store
+Thumbs.db
+
+# Lokale beheerpakketten
+admin-local/
+backend-data/
