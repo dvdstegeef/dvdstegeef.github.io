@@ -1,129 +1,94 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="nl-BE">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#000000">
-  <meta http-equiv="Content-Security-Policy" content="__CSP__">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="dvdstegeef.">
-  <meta name="msapplication-TileColor" content="#000000">
-  <meta name="msapplication-config" content="browserconfig.xml">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Dvd bekijken | dvdstegeef.">
-  <meta property="og:description" content="Bekijk de details van een beschikbare dvd.">
-  <meta property="og:site_name" content="dvdstegeef.">
-  <meta property="og:image" content="assets/social/open-graph-1200x630.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Dvd bekijken | dvdstegeef.">
-  <meta name="twitter:description" content="Bekijk de details van een beschikbare dvd.">
-  <meta name="twitter:image" content="assets/social/open-graph-1200x630.png">
-  <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="48x48" href="assets/icons/favicon-48x48.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
-  <link rel="manifest" href="site.webmanifest">
-  <meta name="description" content="Bekijk de details van een beschikbare dvd.">
-  <title>Dvd bekijken | dvdstegeef.</title>
-  <link rel="stylesheet" href="css/site.css">
-  <script src="js/runtime-config.js" defer></script>
-  <script src="js/api-client.js" defer></script>
-  <script src="js/data.js" defer></script>
-  <script src="js/app.js" defer></script>
-  <script src="js/detail.js" defer></script>
-</head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#000000" name="theme-color"/>
+<meta content="__CSP__" http-equiv="Content-Security-Policy"/>
+<meta content="yes" name="apple-mobile-web-app-capable"/>
+<meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+<meta content="dvdstegeef." name="apple-mobile-web-app-title"/>
+<meta content="#000000" name="msapplication-TileColor"/>
+<meta content="browserconfig.xml" name="msapplication-config"/>
+<meta content="website" property="og:type"/>
+<meta content="Dvd bekijken | dvdstegeef." property="og:title"/>
+<meta content="Bekijk de details van een beschikbare dvd." property="og:description"/>
+<meta content="dvdstegeef." property="og:site_name"/>
+<meta content="assets/social/open-graph-1200x630.png" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Dvd bekijken | dvdstegeef." name="twitter:title"/>
+<meta content="Bekijk de details van een beschikbare dvd." name="twitter:description"/>
+<meta content="assets/social/open-graph-1200x630.png" name="twitter:image"/>
+<link href="assets/icons/favicon.ico" rel="icon" type="image/x-icon"/>
+<link href="assets/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="assets/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="assets/icons/favicon-48x48.png" rel="icon" sizes="48x48" type="image/png"/>
+<link href="assets/icons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="site.webmanifest" rel="manifest"/>
+<meta content="Bekijk de details van een beschikbare dvd." name="description"/>
+<title>Dvd bekijken | dvdstegeef.</title>
+<link href="css/site.css" rel="stylesheet"/>
+<script defer="" src="js/runtime-config.js"></script>
+<script defer="" src="js/api-client.js"></script>
+<script defer="" src="js/data.js"></script>
+<script defer="" src="js/app.js"></script>
+<script defer="" src="js/detail.js"></script>
+<link href="css/creative-site.css" rel="stylesheet"/><script defer="" src="js/experience.js"></script></head>
 <body data-page="dvds">
-  <noscript><div class="noscript-banner">JavaScript is nodig voor zoeken en reserveren.</div></noscript>
+<noscript><div class="noscript-banner">JavaScript is nodig voor zoeken en reserveren.</div></noscript>
 <a class="skip-link" href="#main-content">Ga naar de inhoud</a>
-  
 <header class="site-header">
-  <div class="container header-inner">
-    <a class="brand" href="index.html" aria-label="dvdstegeef., home"><img class="site-logo site-logo-wordmark" src="assets/brand/logo-elements-transparent.png" alt="dvdstegeef. – online dvd-weggeefplatform door Toby De Prins"></a>
-
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation">
-      <span></span><span></span><span></span>
-      <span class="sr-only">Menu openen</span>
-    </button>
-
-    <nav class="main-nav" id="main-navigation" aria-label="Hoofdnavigatie"><a href="index.html">Home</a><a href="dvds.html">Dvd's</a><a href="how-it-works.html">Zo werkt het</a><a href="about.html">Over Toby</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a></nav>
-
-    <div class="header-actions">
-      <a class="header-search" href="dvds.html" aria-label="Dvd's zoeken">
-        
-<svg viewBox="0 0 24 24" aria-hidden="true">
-  <circle cx="11" cy="11" r="7"></circle>
-  <path d="m20 20-3.6-3.6"></path>
+<div class="container header-inner">
+<a aria-label="dvdstegeef., home" class="brand" href="index.html"><img alt="dvdstegeef. – online dvd-weggeefplatform door Toby De Prins" class="site-logo site-logo-wordmark" src="assets/brand/logo-elements-transparent.png"/></a>
+<button aria-controls="main-navigation" aria-expanded="false" class="menu-toggle" type="button">
+<span></span><span></span><span></span>
+<span class="sr-only">Menu openen</span>
+</button>
+<nav aria-label="Hoofdnavigatie" class="main-nav" id="main-navigation"><a href="index.html">Home</a><a href="dvds.html">Dvd's</a><a href="how-it-works.html">Zo werkt het</a><a href="about.html">Over dvdstegeef.</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a></nav>
+<div class="header-actions">
+<a aria-label="Dvd's zoeken" class="header-search" href="dvds.html">
+<svg aria-hidden="true" viewbox="0 0 24 24">
+<circle cx="11" cy="11" r="7"></circle>
+<path d="m20 20-3.6-3.6"></path>
 </svg>
 <span>Zoeken</span>
-      </a>
-      <a class="reservation-link" href="reservation.html" aria-label="Mijn selectie">
-        
-<svg viewBox="0 0 24 24" aria-hidden="true">
-  <path d="M4 6h16l-1.4 13H5.4L4 6Z"></path>
-  <path d="M8 6a4 4 0 0 1 8 0"></path>
+</a>
+<a aria-label="Mijn selectie" class="reservation-link" href="reservation.html">
+<svg aria-hidden="true" viewbox="0 0 24 24">
+<path d="M4 6h16l-1.4 13H5.4L4 6Z"></path>
+<path d="M8 6a4 4 0 0 1 8 0"></path>
 </svg>
-<span class="reservation-count" data-reservation-count>0</span>
-      </a>
-      <a class="login-link" href="account.html" aria-label="Mijn account">
-        
-<svg viewBox="0 0 24 24" aria-hidden="true">
-  <circle cx="12" cy="8" r="4"></circle>
-  <path d="M4.5 21a7.5 7.5 0 0 1 15 0"></path>
+<span class="reservation-count" data-reservation-count="">0</span>
+</a>
+<a aria-label="Mijn account" class="login-link" href="account.html">
+<svg aria-hidden="true" viewbox="0 0 24 24">
+<circle cx="12" cy="8" r="4"></circle>
+<path d="M4.5 21a7.5 7.5 0 0 1 15 0"></path>
 </svg>
 <span>Mijn account</span>
-      </a>
-    </div>
-  </div>
+</a>
+</div>
+</div>
 </header>
-
-  <main id="main-content">
-<section class="detail-section" id="dvd-detail"></section>
-<section class="section related-section">
-  <div class="container">
-    <div class="section-heading">
-      <div><p class="section-kicker">Misschien ook leuk</p><h2>Vergelijkbare dvd's</h2></div>
-      <a class="view-all" href="dvds.html">Bekijk alle <span aria-hidden="true">›</span></a>
-    </div>
-    <div class="related-grid" id="related-grid"></div>
-  </div>
-</section>
+<main class="experience-page experience-detail" id="main-content">
+<section class="detail-section detail-section--creative" id="dvd-detail"><div class="container detail-loading"><p class="eyebrow">Even geduld</p><h1>Dvd-detail laden…</h1></div></section>
+<section class="detail-promise"><div class="container detail-promise__grid"><article><span>01</span><h3>De dvd is gratis</h3><p>Geen verkoopprijs, reservatiekost of verplichte bijdrage.</p></article><article><span>02</span><h3>Je kiest zelf</h3><p>Voeg deze titel alleen toe wanneer je hem werkelijk wilt ontvangen.</p></article><article><span>03</span><h3>Jij wordt eigenaar</h3><p>Na afhaling of levering hoef je niets terug te brengen.</p></article></div></section>
+<section class="section related-section related-section--creative"><div class="container"><div class="editorial-heading"><div><p class="section-kicker">Misschien ook iets voor jou</p><h2>Nog meer films uit dezelfde hoek.</h2></div><div><p>Vergelijkbare beschikbare titels op basis van genre.</p><a class="editorial-link" href="dvds.html">Bekijk alle dvd’s <span>→</span></a></div></div><div class="related-grid" id="related-grid"></div></div></section>
+<section class="final-cta final-cta--compact"><div class="container final-cta__grid"><div><p class="section-kicker">Nog niet gevonden wat je zoekt?</p><h2>De volledige collectie wacht op je.</h2></div><div class="final-cta__actions"><a class="primary-button" href="dvds.html">Terug naar alle dvd’s</a></div></div></section>
 </main>
-  
 <footer class="site-footer">
-  <div class="container footer-grid">
-    <div class="footer-about">
-      <a class="brand footer-brand" href="index.html"><img class="site-logo site-logo-wordmark" src="assets/brand/logo-elements-transparent.png" alt="dvdstegeef. – online dvd-weggeefplatform door Toby De Prins"></a>
-      <p>Toby geeft zijn dvd-collectie gratis door, zodat bruikbare films niet onnodig worden weggegooid.</p>
-    </div>
-    <div class="footer-column">
-      <h2>Snel naar</h2>
-      <a href="dvds.html">Alle dvd's</a>
-      <a href="reservation.html">Mijn selectie</a>
-      <a href="account.html">Mijn account</a>
-      <a href="how-it-works.html">Zo werkt het</a>
-      <a href="about.html">Over Toby</a>
-    </div>
-    <div class="footer-column">
-      <h2>Hulp & afspraken</h2>
-      <a href="faq.html">Veelgestelde vragen</a>
-      <a href="terms.html">Voorwaarden</a>
-      <a href="privacy.html">Privacy</a>
-      <a href="contact.html">Contact</a>
-    </div>
-    <div class="newsletter footer-contact">
-      <h2>Afhalen in Borsbeek</h2>
-      <p>Na je reservering neemt Toby contact op om een moment af te spreken.</p>
-      <a class="footer-email" href="mailto:info@dvdstegeef.be">info@dvdstegeef.be</a>
-      <a class="primary-button" href="contact.html">Contact opnemen</a>
-    </div>
-  </div>
-  <div class="container copyright"><span>© 2026 dvdstegeef. · door Toby De Prins</span><span>Publieke GitHub Pages-frontend</span></div>
+<div aria-hidden="true" class="footer-filmstrip"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+<div class="container footer-grid footer-grid--creative">
+<div class="footer-about"><a class="brand footer-brand" href="index.html"><img alt="dvdstegeef. – online dvd-weggeefplatform door Toby De Prins" class="site-logo site-logo-wordmark" src="assets/brand/logo-elements-transparent.png"/></a><p>Een persoonlijke opruimactie waarmee bruikbare films een nieuw thuis en een volgende kijkbeurt krijgen.</p><div class="footer-badges"><span>Gratis dvd’s</span><span>Afhalen in Borsbeek</span><span>Door Toby</span></div></div>
+<div class="footer-column"><h2>Ontdekken</h2><a href="dvds.html">Alle dvd’s</a><a href="how-it-works.html">Zo werkt het</a><a href="about.html">Het verhaal</a><a href="faq.html">Veelgestelde vragen</a></div>
+<div class="footer-column"><h2>Mijn reservatie</h2><a href="reservation.html">Mijn selectie</a><a href="account.html">Mijn account</a><a href="contact.html">Afspraak wijzigen</a><a href="contact.html">Contact opnemen</a></div>
+<div class="footer-contact"><p class="section-kicker">Afhalen in Borsbeek</p><h2>Een film gekozen?</h2><p>Na je reservatie neemt Toby persoonlijk contact op om een moment af te spreken.</p><a class="footer-email" href="mailto:info@dvdstegeef.be">info@dvdstegeef.be</a><a class="primary-button" href="dvds.html">Bekijk de collectie</a></div>
+</div>
+<div class="container copyright"><span>© 2026 dvdstegeef. · een persoonlijk initiatief van Toby De Prins</span><span><a href="terms.html">Voorwaarden</a> · <a href="privacy.html">Privacy</a></span></div>
 </footer>
-<div class="toast" id="site-toast" role="status" aria-live="polite"></div>
-
+<div aria-live="polite" class="toast" id="site-toast" role="status"></div>
 </body>
 </html>

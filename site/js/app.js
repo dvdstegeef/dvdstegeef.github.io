@@ -136,6 +136,7 @@
 
     card.innerHTML = `
       <a class="poster-link" href="dvd.html?id=${encodeURIComponent(item.id)}">
+        <span class="movie-card-free">GRATIS</span>
         <img ${imageAttributes(item)}>
         ${reserved ? '<span class="status-badge unavailable">Niet beschikbaar</span>' : ""}
       </a>

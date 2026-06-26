@@ -1,235 +1,98 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="nl-BE">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#000000">
-  <meta http-equiv="Content-Security-Policy" content="__CSP__">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="dvdstegeef.">
-  <meta name="msapplication-TileColor" content="#000000">
-  <meta name="msapplication-config" content="browserconfig.xml">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Mijn reservering | dvdstegeef.">
-  <meta property="og:description" content="Controleer en bevestig je gratis dvd-reservering.">
-  <meta property="og:site_name" content="dvdstegeef.">
-  <meta property="og:image" content="assets/social/open-graph-1200x630.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Mijn reservering | dvdstegeef.">
-  <meta name="twitter:description" content="Controleer en bevestig je gratis dvd-reservering.">
-  <meta name="twitter:image" content="assets/social/open-graph-1200x630.png">
-  <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="48x48" href="assets/icons/favicon-48x48.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
-  <link rel="manifest" href="site.webmanifest">
-  <meta name="description" content="Controleer en bevestig je gratis dvd-reservering.">
-  <title>Mijn reservering | dvdstegeef.</title>
-  <link rel="stylesheet" href="css/site.css">
-  <script src="js/runtime-config.js" defer></script>
-  <script src="js/api-client.js" defer></script>
-  <script src="js/data.js" defer></script>
-  <script src="js/app.js" defer></script>
-  <script src="js/reservation.js" defer></script>
-</head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#000000" name="theme-color"/>
+<meta content="__CSP__" http-equiv="Content-Security-Policy"/>
+<meta content="yes" name="apple-mobile-web-app-capable"/>
+<meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+<meta content="dvdstegeef." name="apple-mobile-web-app-title"/>
+<meta content="#000000" name="msapplication-TileColor"/>
+<meta content="browserconfig.xml" name="msapplication-config"/>
+<meta content="website" property="og:type"/>
+<meta content="Mijn reservatie | dvdstegeef." property="og:title"/>
+<meta content="Controleer je geselecteerde dvd’s en rond je gratis reservatie af." property="og:description"/>
+<meta content="dvdstegeef." property="og:site_name"/>
+<meta content="assets/social/open-graph-1200x630.png" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Mijn reservatie | dvdstegeef." name="twitter:title"/>
+<meta content="Controleer je geselecteerde dvd’s en rond je gratis reservatie af." name="twitter:description"/>
+<meta content="assets/social/open-graph-1200x630.png" name="twitter:image"/>
+<link href="assets/icons/favicon.ico" rel="icon" type="image/x-icon"/>
+<link href="assets/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="assets/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="assets/icons/favicon-48x48.png" rel="icon" sizes="48x48" type="image/png"/>
+<link href="assets/icons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="site.webmanifest" rel="manifest"/>
+<meta content="Controleer je geselecteerde dvd’s en rond je gratis reservatie af." name="description"/>
+<title>Mijn reservatie | dvdstegeef.</title>
+<link href="css/site.css" rel="stylesheet"/>
+<script defer="" src="js/runtime-config.js"></script>
+<script defer="" src="js/api-client.js"></script>
+<script defer="" src="js/data.js"></script>
+<script defer="" src="js/app.js"></script>
+<script defer="" src="js/reservation.js"></script>
+<link href="css/creative-site.css" rel="stylesheet"/><script defer="" src="js/experience.js"></script></head>
 <body data-page="reservation">
-  <noscript><div class="noscript-banner">JavaScript is nodig voor zoeken en reserveren.</div></noscript>
+<noscript><div class="noscript-banner">JavaScript is nodig voor zoeken en reserveren.</div></noscript>
 <a class="skip-link" href="#main-content">Ga naar de inhoud</a>
-  
 <header class="site-header">
-  <div class="container header-inner">
-    <a class="brand" href="index.html" aria-label="dvdstegeef., home"><img class="site-logo site-logo-wordmark" src="assets/brand/logo-elements-transparent.png" alt="dvdstegeef. – online dvd-weggeefplatform door Toby De Prins"></a>
-
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation">
-      <span></span><span></span><span></span>
-      <span class="sr-only">Menu openen</span>
-    </button>
-
-    <nav class="main-nav" id="main-navigation" aria-label="Hoofdnavigatie"><a href="index.html">Home</a><a href="dvds.html">Dvd's</a><a href="how-it-works.html">Zo werkt het</a><a href="about.html">Over Toby</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a></nav>
-
-    <div class="header-actions">
-      <a class="header-search" href="dvds.html" aria-label="Dvd's zoeken">
-        
-<svg viewBox="0 0 24 24" aria-hidden="true">
-  <circle cx="11" cy="11" r="7"></circle>
-  <path d="m20 20-3.6-3.6"></path>
+<div class="container header-inner">
+<a aria-label="dvdstegeef., home" class="brand" href="index.html"><img alt="dvdstegeef. – online dvd-weggeefplatform door Toby De Prins" class="site-logo site-logo-wordmark" src="assets/brand/logo-elements-transparent.png"/></a>
+<button aria-controls="main-navigation" aria-expanded="false" class="menu-toggle" type="button">
+<span></span><span></span><span></span>
+<span class="sr-only">Menu openen</span>
+</button>
+<nav aria-label="Hoofdnavigatie" class="main-nav" id="main-navigation"><a href="index.html">Home</a><a href="dvds.html">Dvd's</a><a href="how-it-works.html">Zo werkt het</a><a href="about.html">Over dvdstegeef.</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a></nav>
+<div class="header-actions">
+<a aria-label="Dvd's zoeken" class="header-search" href="dvds.html">
+<svg aria-hidden="true" viewbox="0 0 24 24">
+<circle cx="11" cy="11" r="7"></circle>
+<path d="m20 20-3.6-3.6"></path>
 </svg>
 <span>Zoeken</span>
-      </a>
-      <a class="reservation-link" href="reservation.html" aria-label="Mijn reservering">
-        
-<svg viewBox="0 0 24 24" aria-hidden="true">
-  <path d="M4 6h16l-1.4 13H5.4L4 6Z"></path>
-  <path d="M8 6a4 4 0 0 1 8 0"></path>
+</a>
+<a aria-label="Mijn reservering" class="reservation-link" href="reservation.html">
+<svg aria-hidden="true" viewbox="0 0 24 24">
+<path d="M4 6h16l-1.4 13H5.4L4 6Z"></path>
+<path d="M8 6a4 4 0 0 1 8 0"></path>
 </svg>
-<span class="reservation-count" data-reservation-count>0</span>
-      </a>
-      <a class="login-link" href="account.html" aria-label="Mijn account">
-        
-<svg viewBox="0 0 24 24" aria-hidden="true">
-  <circle cx="12" cy="8" r="4"></circle>
-  <path d="M4.5 21a7.5 7.5 0 0 1 15 0"></path>
+<span class="reservation-count" data-reservation-count="">0</span>
+</a>
+<a aria-label="Mijn account" class="login-link" href="account.html">
+<svg aria-hidden="true" viewbox="0 0 24 24">
+<circle cx="12" cy="8" r="4"></circle>
+<path d="M4.5 21a7.5 7.5 0 0 1 15 0"></path>
 </svg>
 <span>Mijn account</span>
-      </a>
-    </div>
-  </div>
+</a>
+</div>
+</div>
 </header>
-
-  <main id="main-content">
-
-<section class="page-hero compact">
-  <div class="container">
-    <p class="eyebrow">Onbeperkt en gratis reserveren</p>
-    <h1>Mijn reservering</h1>
-    <p>Je mag een onbeperkt aantal beschikbare dvd's selecteren en ook meerdere afzonderlijke reserveringen maken.</p>
-  </div>
-</section>
-
-<section class="reservation-section">
-  <div class="container">
-    <div class="success-panel" id="reservation-success" hidden></div>
-
-    <div class="account-recommendation" id="account-recommendation">
-      <div>
-        <p class="section-kicker">account is niet verplicht</p>
-        <h2>Een account maakt meerdere reserveringen makkelijker.</h2>
-        <p>Met een account kun je je reserveringen controleren, contactgegevens wijzigen en een reservering zelf annuleren.</p>
-      </div>
-      <a class="secondary-button" href="account.html">Inloggen of account maken</a>
-    </div>
-
-    <div class="reservation-layout" id="reservation-layout">
-      <div>
-        <div class="reservation-heading">
-          <h2>Geselecteerde dvd's <span id="reservation-page-count">0</span></h2>
-          <a href="dvds.html">Nog dvd's kiezen</a>
-        </div>
-        <div class="reservation-selection" id="reservation-selection"></div>
-
-        <aside class="reservation-reminder">
-          <strong>Afhalen of verzending op aanvraag</strong>
-          <p>
-            Afhalen in Borsbeek is de standaard. Verzending kan op jouw vraag, maar de verzendkosten
-            moeten vóór verzending volledig betaald zijn.
-          </p>
-        </aside>
-      </div>
-
-      <form class="checkout-card" id="reservation-form">
-        <p class="section-kicker">jouw gegevens</p>
-        <h2>Reservering afronden</h2>
-
-        <div class="form-grid two">
-          <label>Voornaam<input name="firstName" autocomplete="given-name" required></label>
-          <label>Achternaam<input name="lastName" autocomplete="family-name" required></label>
-        </div>
-
-        <fieldset class="contact-preference">
-          <legend>Hoe mag Toby contact met je opnemen?</legend>
-          <label><input type="radio" name="contactPreference" value="WhatsApp" required><span>WhatsApp</span></label>
-          <label><input type="radio" name="contactPreference" value="SMS" required><span>Sms</span></label>
-          <label><input type="radio" name="contactPreference" value="E-mail" required><span>E-mail</span></label>
-        </fieldset>
-
-        <label>E-mailadres
-          <input type="email" name="email" autocomplete="email" placeholder="Nodig voor e-mail en aangeraden voor je account">
-        </label>
-        <label>Telefoonnummer
-          <input type="tel" name="phone" autocomplete="tel" placeholder="Nodig voor sms of WhatsApp">
-        </label>
-
-        <fieldset class="delivery-choice">
-          <legend>Hoe wil je de dvd's ontvangen?</legend>
-          <label>
-            <input type="radio" name="deliveryMethod" value="pickup" checked>
-            <span><strong>Afhalen in Borsbeek</strong><small>Gratis, op afspraak met Toby</small></span>
-          </label>
-          <label>
-            <input type="radio" name="deliveryMethod" value="shipping">
-            <span><strong>Verzending aanvragen</strong><small>Alleen na akkoord en voorafbetaling van de verzendkosten</small></span>
-          </label>
-        </fieldset>
-
-        <div class="shipping-fields" id="shipping-fields" hidden>
-          <div class="shipping-notice">
-            Toby bevestigt eerst of verzending mogelijk is en welk bedrag je vooraf moet betalen.
-            Er wordt pas verzonden nadat de betaling ontvangen is.
-          </div>
-          <label>Straat en huisnummer<input name="street" autocomplete="street-address"></label>
-          <div class="form-grid two">
-            <label>Postcode<input name="postalCode" autocomplete="postal-code"></label>
-            <label>Plaats<input name="city" autocomplete="address-level2"></label>
-          </div>
-          <label>Land<input name="country" value="België" autocomplete="country-name"></label>
-          <label class="checkbox-label">
-            <input type="checkbox" name="shippingPaymentAgreement" value="yes">
-            <span>Ik begrijp dat ik de verzendkosten vooraf moet betalen en dat verzending pas daarna plaatsvindt.</span>
-          </label>
-        </div>
-
-        <label>Opmerking
-          <textarea name="note" rows="3" placeholder="Optioneel"></textarea>
-        </label>
-
-        <div class="order-summary">
-          <strong>Je reserveert:</strong>
-          <ul id="reservation-summary"></ul>
-          <p class="free-total"><span>Dvd's</span><strong>Gratis</strong></p>
-          <p class="shipping-total" id="shipping-total" hidden>
-            <span>Verzendkosten</span><strong>Later bevestigd en vooraf te betalen</strong>
-          </p>
-        </div>
-
-        <label class="checkbox-label">
-          <input type="checkbox" name="agree" value="yes" required>
-          <span>Ik ga akkoord met de <a href="terms.html">reserverings-, afhaal- en verzendvoorwaarden</a>.</span>
-        </label>
-
-        <button class="primary-button full" type="submit">Definitief reserveren</button>
-        <p class="form-disclaimer">Demo: gegevens en reserveringen worden uitsluitend in deze browser opgeslagen.</p>
-      </form>
-    </div>
-  </div>
-</section>
-
+<main class="experience-page experience-reservation" id="main-content">
+<section class="editorial-hero editorial-hero--reservation"><div aria-hidden="true" class="editorial-hero__shape"></div><div class="container editorial-hero__grid"><div><p class="eyebrow">Van selectie naar afspraak</p><h1>Maak je keuze <span>definitief.</span></h1><p>Controleer je dvd’s, laat je contactgegevens achter en kies tussen gratis afhalen of een verzendaanvraag.</p></div><div aria-hidden="true" class="reservation-hero-route"><div class="is-done"><span>1</span><small>Kiezen</small></div><i></i><div class="is-active"><span>2</span><small>Reserveren</small></div><i></i><div><span>3</span><small>Afspreken</small></div><i></i><div><span>4</span><small>Ontvangen</small></div></div></div></section>
+<section class="reservation-section reservation-section--creative"><div class="container"><div class="success-panel" hidden="" id="reservation-success"></div><div class="account-recommendation" id="account-recommendation"><div><p class="section-kicker">Account is niet verplicht</p><h2>Een account maakt meerdere reserveringen makkelijker.</h2><p>Volg de status op, pas contactgegevens aan of annuleer zelf wanneer dat nodig is.</p></div><a class="secondary-button" href="account.html">Inloggen of account maken</a></div>
+<div class="reservation-layout" id="reservation-layout">
+<div class="reservation-left"><div class="reservation-heading"><div><p class="section-kicker">Jouw filmstapel</p><h2>Geselecteerde dvd’s <span id="reservation-page-count">0</span></h2></div><a href="dvds.html">Nog dvd’s kiezen →</a></div><div class="reservation-selection" id="reservation-selection"></div><aside class="reservation-reminder"><span>Goed om te weten</span><strong>De dvd’s zelf blijven volledig gratis.</strong><p>Afhalen in Borsbeek is de standaard. Bij verzending worden uitsluitend de werkelijke verzend- en noodzakelijke verpakkingskosten vooraf afgesproken.</p></aside><div class="after-reservation"><p class="section-kicker">Wat gebeurt hierna?</p><div><article><span>01</span><h3>Controle</h3><p>Ik controleer de beschikbaarheid en je contactgegevens.</p></article><article><span>02</span><h3>Contact</h3><p>Je ontvangt een bericht via je gekozen contactmethode.</p></article><article><span>03</span><h3>Afspraak</h3><p>We bepalen samen afhaling of mogelijke verzending.</p></article></div></div></div>
+<form class="checkout-card checkout-card--editorial" id="reservation-form"><div class="checkout-card__header"><span>RESERVATIE</span><h2>Jouw gegevens</h2><p>Alleen wat nodig is om je selectie en afspraak uit te voeren.</p></div><div class="form-grid two"><label>Voornaam<input autocomplete="given-name" name="firstName" required=""/></label><label>Achternaam<input autocomplete="family-name" name="lastName" required=""/></label></div><fieldset class="contact-preference"><legend>Hoe mag Toby contact met je opnemen?</legend><label><input name="contactPreference" required="" type="radio" value="WhatsApp"/><span>WhatsApp</span></label><label><input name="contactPreference" required="" type="radio" value="SMS"/><span>Sms</span></label><label><input name="contactPreference" required="" type="radio" value="E-mail"/><span>E-mail</span></label></fieldset><label>E-mailadres<input autocomplete="email" name="email" placeholder="Nodig voor e-mail en handig voor opvolging" type="email"/></label><label>Telefoonnummer<input autocomplete="tel" name="phone" placeholder="Nodig voor sms of WhatsApp" type="tel"/></label><fieldset class="delivery-choice"><legend>Hoe wil je de dvd’s ontvangen?</legend><label><input checked="" name="deliveryMethod" type="radio" value="pickup"/><span><strong>Afhalen in Borsbeek</strong><small>Gratis en persoonlijk op afspraak</small></span></label><label><input name="deliveryMethod" type="radio" value="shipping"/><span><strong>Verzending aanvragen</strong><small>Na akkoord en voorafbetaling van de werkelijke kosten</small></span></label></fieldset><div class="shipping-fields" hidden="" id="shipping-fields"><div class="shipping-notice">Ik bevestig eerst of verzending praktisch mogelijk is en welk bedrag je vooraf moet betalen. Er wordt pas verzonden nadat de betaling ontvangen is.</div><label>Straat en huisnummer<input autocomplete="street-address" name="street"/></label><div class="form-grid two"><label>Postcode<input autocomplete="postal-code" name="postalCode"/></label><label>Plaats<input autocomplete="address-level2" name="city"/></label></div><label>Land<input autocomplete="country-name" name="country" value="België"/></label><label class="checkbox-label"><input name="shippingPaymentAgreement" type="checkbox" value="yes"/><span>Ik begrijp dat de verzendkosten vooraf moeten worden betaald.</span></label></div><label>Opmerking<textarea name="note" placeholder="Bijvoorbeeld een praktisch detail of vraag" rows="4"></textarea></label><div class="order-summary"><span class="order-summary__label">Je reserveert</span><ul id="reservation-summary"></ul><p class="free-total"><span>Dvd’s</span><strong>Gratis</strong></p><p class="shipping-total" hidden="" id="shipping-total"><span>Verzendkosten</span><strong>Later bevestigd en vooraf te betalen</strong></p></div><label class="checkbox-label"><input name="agree" required="" type="checkbox" value="yes"/><span>Ik ga akkoord met de <a href="terms.html">reserverings-, afhaal- en verzendvoorwaarden</a>.</span></label><button class="primary-button full" type="submit">Definitief reserveren</button><p class="form-disclaimer">Je persoonsgegevens horen uitsluitend via de gekoppelde beveiligde API te worden verwerkt.</p></form>
+</div>
+</div></section>
+<section class="compact-trust"><div class="container compact-trust__grid"><article><strong>€ 0</strong><span>Dvd-prijs</span></article><article><strong>Persoonlijk</strong><span>Contact met Toby</span></article><article><strong>Optioneel</strong><span>Bezoekersaccount</span></article><article><strong>Van jou</strong><span>Na de overdracht</span></article></div></section>
 </main>
-  
 <footer class="site-footer">
-  <div class="container footer-grid">
-    <div class="footer-about">
-      <a class="brand footer-brand" href="index.html"><img class="site-logo site-logo-wordmark" src="assets/brand/logo-elements-transparent.png" alt="dvdstegeef. – online dvd-weggeefplatform door Toby De Prins"></a>
-      <p>Toby geeft zijn dvd-collectie gratis door, zodat bruikbare films niet onnodig worden weggegooid.</p>
-    </div>
-    <div class="footer-column">
-      <h2>Snel naar</h2>
-      <a href="dvds.html">Alle dvd's</a>
-      <a href="reservation.html">Mijn selectie</a>
-      <a href="account.html">Mijn account</a>
-      <a href="how-it-works.html">Zo werkt het</a>
-      <a href="about.html">Over Toby</a>
-    </div>
-    <div class="footer-column">
-      <h2>Hulp & afspraken</h2>
-      <a href="faq.html">Veelgestelde vragen</a>
-      <a href="terms.html">Voorwaarden</a>
-      <a href="privacy.html">Privacy</a>
-      <a href="contact.html">Contact</a>
-    </div>
-    <div class="newsletter footer-contact">
-      <h2>Afhalen in Borsbeek</h2>
-      <p>Na je reservering neemt Toby contact op om een moment af te spreken.</p>
-      <a class="footer-email" href="mailto:info@dvdstegeef.be">info@dvdstegeef.be</a>
-      <a class="primary-button" href="contact.html">Contact opnemen</a>
-    </div>
-  </div>
-  <div class="container copyright"><span>© 2026 dvdstegeef. · door Toby De Prins</span><span>Publieke GitHub Pages-frontend</span></div>
+<div aria-hidden="true" class="footer-filmstrip"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+<div class="container footer-grid footer-grid--creative">
+<div class="footer-about"><a class="brand footer-brand" href="index.html"><img alt="dvdstegeef. – online dvd-weggeefplatform door Toby De Prins" class="site-logo site-logo-wordmark" src="assets/brand/logo-elements-transparent.png"/></a><p>Een persoonlijke opruimactie waarmee bruikbare films een nieuw thuis en een volgende kijkbeurt krijgen.</p><div class="footer-badges"><span>Gratis dvd’s</span><span>Afhalen in Borsbeek</span><span>Door Toby</span></div></div>
+<div class="footer-column"><h2>Ontdekken</h2><a href="dvds.html">Alle dvd’s</a><a href="how-it-works.html">Zo werkt het</a><a href="about.html">Het verhaal</a><a href="faq.html">Veelgestelde vragen</a></div>
+<div class="footer-column"><h2>Mijn reservatie</h2><a href="reservation.html">Mijn selectie</a><a href="account.html">Mijn account</a><a href="contact.html">Afspraak wijzigen</a><a href="contact.html">Contact opnemen</a></div>
+<div class="footer-contact"><p class="section-kicker">Afhalen in Borsbeek</p><h2>Een film gekozen?</h2><p>Na je reservatie neemt Toby persoonlijk contact op om een moment af te spreken.</p><a class="footer-email" href="mailto:info@dvdstegeef.be">info@dvdstegeef.be</a><a class="primary-button" href="dvds.html">Bekijk de collectie</a></div>
+</div>
+<div class="container copyright"><span>© 2026 dvdstegeef. · een persoonlijk initiatief van Toby De Prins</span><span><a href="terms.html">Voorwaarden</a> · <a href="privacy.html">Privacy</a></span></div>
 </footer>
-<div class="toast" id="site-toast" role="status" aria-live="polite"></div>
-
+<div aria-live="polite" class="toast" id="site-toast" role="status"></div>
 </body>
 </html>

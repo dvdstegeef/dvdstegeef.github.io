@@ -24,40 +24,60 @@ document.addEventListener("DOMContentLoaded", () => {
     const state = app.getAvailabilityState();
     const buttonText = unavailable
       ? "Niet meer beschikbaar"
-      : !enabled ? "Reserveren tijdelijk uit" : app.isInCart(dvd.id) ? "Geselecteerd" : "Reserveer deze dvd";
+      : !enabled ? "Reserveren tijdelijk uit" : app.isInCart(dvd.id) ? "Geselecteerd" : "Voeg toe aan mijn selectie";
 
-    root.innerHTML = `<div class="container detail-layout">
-      <div class="detail-poster-wrap">
+    const genres = list(dvd.genre);
+    const age = dvd.age === "AL" ? "Alle leeftijden" : dvd.age ? `${dvd.age}+` : "Niet vermeld";
+    const original = dvd.originalTitle && dvd.originalTitle !== dvd.title
+      ? `<p class="detail-original-title">Oorspronkelijke titel: ${app.escapeHtml(dvd.originalTitle)}</p>` : "";
+
+    root.innerHTML = `<div class="container detail-cinema">
+      <div class="detail-poster-stage">
         <img class="detail-poster" src="${app.escapeHtml(dvd.image || 'assets/poster-placeholder.svg')}" alt="Hoes van ${app.escapeHtml(dvd.title)}" onerror="this.onerror=null;this.src='assets/poster-placeholder.svg';">
         ${unavailable ? '<span class="status-badge unavailable large">Al gereserveerd</span>' : ""}
       </div>
-      <div class="detail-copy">
-        <a class="back-link" href="dvds.html">← Terug naar alle dvd's</a>
-        <p class="eyebrow">${app.escapeHtml(list(dvd.genre).join(" · "))}</p>
+      <div class="detail-cinema__copy">
+        <a class="back-link" href="dvds.html">← Terug naar de filmkast</a>
+        <div class="detail-cinema__genres">${genres.map(genre => `<span>${app.escapeHtml(genre)}</span>`).join("") || "<span>Film</span>"}</div>
         <h1>${app.escapeHtml(dvd.title)}</h1>
+        ${original}
         <p class="detail-lead">${app.escapeHtml(dvd.description || "Geen samenvatting beschikbaar.")}</p>
+        <div class="detail-facts">
+          <span>${app.escapeHtml(dvd.year || "Jaar onbekend")}</span>
+          <span>${app.escapeHtml(age)}</span>
+          ${dvd.duration ? `<span>${app.escapeHtml(dvd.duration)} minuten</span>` : ""}
+          ${dvd.language ? `<span>${app.escapeHtml(dvd.language)}</span>` : ""}
+          <span>Gratis over te nemen</span>
+        </div>
         <dl class="metadata-grid">
-          ${field("Jaar", dvd.year)}
-          ${field("Leeftijd", dvd.age === "AL" ? "Alle leeftijden" : `${dvd.age}+`)}
+          ${field("Uitgavejaar", dvd.year)}
+          ${field("Leeftijd", age)}
           ${field("Speelduur", dvd.duration ? `${dvd.duration} minuten` : "")}
-          ${field("Taal", dvd.language)}
+          ${field("Gesproken taal", dvd.language)}
           ${field("Regisseur", dvd.director)}
           ${field("Acteurs", list(dvd.actors))}
+          ${field("Ondertiteling", dvd.subtitles)}
+          ${field("Regiocode", dvd.regionCode)}
         </dl>
         <div class="detail-actions">
           <button class="primary-button" type="button" data-add-dvd="${app.escapeHtml(app.normalizeId(dvd.id))}" ${unavailable || !enabled ? "disabled" : ""}>${buttonText}</button>
           <a class="secondary-button" href="reservation.html">Mijn selectie bekijken</a>
         </div>
         <div class="info-note">
-          <strong>${enabled ? "Gratis reserveren en afhalen in Borsbeek" : "Publieke catalogus in veilige leesmodus"}</strong>
-          <p>${enabled ? "Toby neemt na je aanvraag contact op om een geschikt moment af te spreken." : app.escapeHtml(state.error || "De beveiligde reserveringsservice is nog niet gekoppeld.")}</p>
+          <strong>${enabled ? "Deze dvd is gratis en kan op afspraak worden afgehaald" : "Publieke catalogus in veilige leesmodus"}</strong>
+          <p>${enabled ? "Na je reservatie neemt Toby persoonlijk contact op om afhaling in Borsbeek of een mogelijke verzending te bespreken." : app.escapeHtml(state.error || "De beveiligde reserveringsservice is nog niet gekoppeld.")}</p>
+        </div>
+        <div class="detail-mini-journey" aria-label="Wat gebeurt na selecteren">
+          <article><span>01</span><strong>Toevoegen aan je selectie</strong></article>
+          <article><span>02</span><strong>Contact en afspraak</strong></article>
+          <article><span>03</span><strong>Volledig jouw eigendom</strong></article>
         </div>
       </div>
     </div>`;
 
     related.innerHTML = "";
     app.getAvailable()
-      .filter(item => app.normalizeId(item.id) !== app.normalizeId(dvd.id) && list(item.genre).some(genre => list(dvd.genre).includes(genre)))
+      .filter(item => app.normalizeId(item.id) !== app.normalizeId(dvd.id) && list(item.genre).some(genre => genres.includes(genre)))
       .slice(0, 4)
       .forEach(item => related.append(app.movieCard(item)));
   };

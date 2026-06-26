@@ -1,12 +1,12 @@
-const CACHE_NAME = "dvdstegeef-pages-v1";
+const CACHE_NAME = "dvdstegeef-pages-v2";
 const CORE_ASSETS = [
   "./", "./index.html", "./dvds.html", "./dvd.html", "./reservation.html",
   "./account.html", "./how-it-works.html", "./about.html", "./faq.html",
   "./contact.html", "./terms.html", "./privacy.html", "./offline.html",
-  "./css/site.css", "./js/runtime-config.js", "./js/api-client.js",
+  "./css/site.css", "./css/creative-site.css", "./js/runtime-config.js", "./js/api-client.js",
   "./js/data.js", "./js/app.js", "./js/home.js", "./js/catalog.js",
   "./js/detail.js", "./js/reservation.js", "./js/account.js",
-  "./js/contact.js", "./js/forms.js", "./assets/poster-placeholder.svg",
+  "./js/contact.js", "./js/forms.js", "./js/experience.js", "./assets/poster-placeholder.svg",
   "./assets/brand/logo-elements-transparent.png", "./site.webmanifest"
 ];
 self.addEventListener("install", event => event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(CORE_ASSETS)).then(() => self.skipWaiting())));
